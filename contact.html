@@ -153,25 +153,28 @@
             <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
                 <div class="col-lg-8">
                     <div class="bg-white rounded p-5 m-5 mb-0">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Subject" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="5" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
+                      <form name="registrationForm2">
+                        <div class="row g-3">
+                          <div class="col-12 col-sm-6">
+                            <input type="text" class="form-control bg-light border-0" placeholder="Your Name" id="name" name="name" style="height: 55px" required />
+                          </div>
+                          <div class="col-12 col-sm-6">
+                            <input type="email" class="form-control bg-light border-0" placeholder="Your Email" id="email" name="email" style="height: 55px" required />
+                          </div>
+                          <div class="col-12 col-sm-12">
+                            <div class="date" id="date" data-target-input="nearest">
+                              <input type="text" class="form-control bg-light border-0 datetimepicker-input" placeholder="Phone" id="phone" name="phone" style="height: 55px" required />
                             </div>
-                        </form>
+                          </div>
+                          <div class="col-12 col-sm-12">
+                            <textarea class="form-control bg-light border-0" placeholder="Enter your message" id="message" name="message" style="height: 120px" required></textarea>
+                          </div>
+                          <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit" id="registerButton">Make An Appointment</button>
+                            <div id="loader" class="loader" style="display: none"></div>
+                          </div>
+                        </div>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -304,7 +307,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+<script src="/js/contactusform.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
